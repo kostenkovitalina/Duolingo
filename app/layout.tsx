@@ -1,3 +1,4 @@
+'use client'
 import {
   ClerkProvider,
   SignInButton,
@@ -14,12 +15,6 @@ export default function RootLayout({children,}: { children: React.ReactNode}) {
       <ClerkProvider>
         <html lang="en">
         <body className={font.className}>
-        <SignedOut>
-            <SignInButton/>
-        </SignedOut>
-        <SignedIn>
-            <UserButton/>
-        </SignedIn>
         {children}
         </body>
         </html>
