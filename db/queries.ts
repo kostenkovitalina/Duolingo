@@ -1,14 +1,17 @@
-import {revalidateTag} from "next/cache";
 import db from "@/db/drizzle";
 import {eq} from "drizzle-orm";
-import {userProgress} from "@/db/schema";
-import { auth } from "@clerk/nextjs/server"
+import {courses, userProgress} from "@/db/schema";
+import {auth} from "@clerk/nextjs/server"
+import {cache} from "react";
 
+export const getCourses = cache(async () => {
+    const data = await db.query.courses.findMany();
 
-export const getUserProgress = async () => {
-     revalidateTag("user_progress");
-    const { userId } = await auth();
-    console.log(userId, 'userId');
+    return data;
+});
+
+export const getUserProgress = cache(async () => {
+    const {userId} = await auth();
 
     if (!userId) return null;
 
@@ -17,15 +20,16 @@ export const getUserProgress = async () => {
         with: {
             activeCourse: true,
         },
+    });
+
+    return data;
+});
+
+export const getCourseById = cache(async (courseId: number) => {
+    const data = await db.query.courses.findFirst({
+        where: eq(courses.id, courseId)
     })
 
-    console.log(auth, 'auth')
-    return data
-}
-
-export const getCourses = async () => {
-    revalidateTag("courses");
-    const data = await db.query.courses.findMany()
-    return data
-};
+    return data;
+})
 

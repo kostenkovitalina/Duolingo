@@ -10,6 +10,7 @@
   ],
   "rules": {
     "@typescript-eslint/no-unused-vars": ["warn", { "args": "none" }],
-    "@typescript-eslint/await-thenable": "off"
+    "@typescript-eslint/await-thenable": "off",
+    "@typescript-eslint/require-await": "off"
   }
 }

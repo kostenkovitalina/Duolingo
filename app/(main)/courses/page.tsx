@@ -7,8 +7,6 @@ const CoursesPage = async () => {
     const coursesData = getCourses();
     const userProgressData = getUserProgress();
 
-    console.log(coursesData, 'data');
-    console.log(userProgressData, 'progress');
     const [courses, userProgress] = await Promise.all([
         coursesData,
         userProgressData,
