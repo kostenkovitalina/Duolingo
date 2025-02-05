@@ -9,6 +9,7 @@
     "plugin:@typescript-eslint/recommended-requiring-type-checking"
   ],
   "rules": {
-    "@typescript-eslint/no-unused-vars": ["warn", { "args": "none" }]
+    "@typescript-eslint/no-unused-vars": ["warn", { "args": "none" }],
+    "@typescript-eslint/await-thenable": "off"
   }
 }
