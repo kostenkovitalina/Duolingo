@@ -22,11 +22,14 @@ export const upsertUserProgress = async (courseId: number) => {
         throw new Error('Course not found ')
     }
 
+
     // if(!course.units.lenght || !course.units[0].lesson.length) {
     //     throw new Error ('Course is empty')
     // }
 
     const existingUserProgress = await getUserProgress()
+    console.log("Updating user progress for userId:", userId);
+    console.log("Type of userId:", typeof userId);
 
     if (existingUserProgress) {
         await db.update(userProgress).set({

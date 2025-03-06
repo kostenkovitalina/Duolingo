@@ -24,8 +24,13 @@ export const List = ({courses, activeCourseId}: Props) => {
         }
 
         startTransition(() => {
-            upsertUserProgress(id).catch(() => toast.error("Something went wrong."))
-        })
+            upsertUserProgress(id)
+                .catch((err) => {
+                    console.error("Upsert Error:", err);
+                    toast.error("Something went wrong.");
+                });
+        });
+
     }
 
     return (
@@ -37,6 +42,7 @@ export const List = ({courses, activeCourseId}: Props) => {
                     title={course.title}
                     imageSrc={course.imageSrc}
                     onClick={onClick}
+                    disabled={pending}
                     active={course.id === activeCourseId}
                 />
             ))}

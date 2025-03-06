@@ -11,7 +11,7 @@
     "format:fix": "prettier --write --ignore-path .gitignore .",
     "db:studio": "npx drizzle-kit studio",
     "db:push": "npx drizzle-kit push",
-    "db:prod": "tsx ./scripts/prod.ts"
+    "db:prod": "tsx ./scripts/seed.ts"
   },
   "author": {
     "name": "Sanidhya Kumar Verma",
@@ -98,13 +98,15 @@
     "react-confetti": "^6.1.0",
     "react-dom": "^18.2.0",
     "react-use": "^17.5.0",
-    "sonner": "^1.4.32",
+    "shadcn-ui": "^0.9.4",
+    "sonner": "^1.7.4",
     "stripe": "^14.22.0",
     "tailwind-merge": "^2.2.2",
     "tailwindcss-animate": "^1.0.7",
     "zustand": "^4.5.2"
   },
   "devDependencies": {
+    "@types/jest": "^29.5.14",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
@@ -115,12 +117,13 @@
     "eslint": "^8.57.1",
     "eslint-config-next": "^14.2.23",
     "eslint-config-prettier": "^9.1.0",
+    "mini-css-extract-plugin": "^2.9.2",
     "pg": "^8.11.3",
     "postcss": "^8",
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.12",
     "tailwindcss": "^3.3.0",
-    "tsx": "^4.7.1",
+    "tsx": "^4.19.3",
     "typescript": "^5"
   }
 }

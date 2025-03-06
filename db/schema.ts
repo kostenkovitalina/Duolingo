@@ -7,7 +7,6 @@ export const courses = pgTable('courses', {
     imageSrc: text('image_src').notNull(),
 })
 
-
 export const userProgress = pgTable('user_progress', {
     userId: text('user_id').primaryKey(),
     userName: text('user_name').notNull().default('User'),
