@@ -2,6 +2,7 @@
   "name": "duolingo-clone",
   "version": "1.0.1",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -11,12 +12,7 @@
     "format:fix": "prettier --write --ignore-path .gitignore .",
     "db:studio": "npx drizzle-kit studio",
     "db:push": "npx drizzle-kit push",
-    "db:prod": "tsx ./scripts/seed.ts"
-  },
-  "author": {
-    "name": "Sanidhya Kumar Verma",
-    "email": "sanidhya.verma12345@gmail.com",
-    "url": "https://github.com/sanidhyy"
+    "db:seed": "tsx ./scripts/seed.ts"
   },
   "description": "Interactive platform for language learning with lessons, quizzes, and progress tracking.",
   "keywords": [
