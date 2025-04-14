@@ -65,6 +65,23 @@ const main = async () => {
                 title: 'Verbs',
                 order: 2,
             },
+            {
+                id: 3,
+                unitId: 1, // Unit 1
+                title: 'Present Tense',
+                order: 3,
+            },
+            {
+                id: 4,
+                unitId: 1, // Unit 1
+                title: 'Past Tense',
+                order: 4,
+            },{
+                id: 5,
+                unitId: 1, // Unit 1
+                title: 'Future Tense',
+                order: 5,
+            },
         ])
 
         await db.insert(schema.challenges).values([
