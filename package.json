@@ -14,7 +14,6 @@
     "db:push": "npx drizzle-kit push",
     "db:seed": "tsx ./scripts/seed.ts"
   },
-  "description": "Interactive platform for language learning with lessons, quizzes, and progress tracking.",
   "keywords": [
     "reactjs",
     "nextjs",
@@ -49,26 +48,6 @@
     "eslint",
     "html",
     "css"
-  ],
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/sanidhyy/duolingo-clone.git"
-  },
-  "homepage": "https://github.com/sanidhyy/duolingo-clone#readme",
-  "bugs": {
-    "url": "https://github.com/sanidhyy/duolingo-clone/issues",
-    "email": "sanidhya.verma12345@gmail.com"
-  },
-  "funding": [
-    {
-      "type": "patreon",
-      "url": "https://www.patreon.com/sanidhy"
-    },
-    {
-      "type": "Buy me a coffee",
-      "url": "https://www.buymeacoffee.com/sanidhy"
-    }
   ],
   "dependencies": {
     "@clerk/clerk-react": "^5.22.10",
