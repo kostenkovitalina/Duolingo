@@ -92,13 +92,13 @@ const main = async () => {
                 order: 1,
                 question: 'Which one of these is the "the man"?'
             },
-            {
-                id: 2,
-                lessonId: 2, //Verbs
-                type: 'SELECT',
-                order: 2,
-                question: 'Which one of these means "to run"?'
-            }
+            // {
+            //     id: 2,
+            //     lessonId: 2, //Verbs
+            //     type: 'SELECT',
+            //     order: 2,
+            //     question: 'Which one of these means "to run"?'
+            // }
         ])
 
         await db.insert(schema.challengeOptions).values([
